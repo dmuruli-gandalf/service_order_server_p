@@ -1,15 +1,5 @@
-#!/bin/bash
-# Default Variables
-# Note: After install create local user db_dev
-#CREATE USER service_app_admin SUPERUSER;
-#CREATE DATABASE db_dev WITH OWNER db_dev;
-#ALTER user service_app_admin with password 'adminPassw0rd1';
-
-DB_SERVER_NAME=localhost
-DB_PORT=5432
-DB_ADMIN_NAME=service_app_admin
-DB_NAME=postgres
-DB_ADMIN_PASSWORD=adminPassw0rd1
+# parameters are set in the following script.
+source test_db_params.sh
 
 
 # login to Azure
