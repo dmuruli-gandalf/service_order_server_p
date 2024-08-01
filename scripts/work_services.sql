@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS project(
 CREATE TABLE IF NOT EXISTS work_order(
     work_order_id BIGSERIAL PRIMARY KEY,
     title VARCHAR(50) NOT NULL,
-    notes VARCHAR(255) NOT NULL,
+    notes VARCHAR(255),
     start_date DATE,
     end_date DATE,
     site_location_id BIGINT,

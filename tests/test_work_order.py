@@ -1,4 +1,4 @@
-from configtest import test_db
+
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 from src.api.main import app
@@ -26,7 +26,7 @@ def test_work_order_api():
     print("payload, ", payload)
     
     
-def test_load_data(test_db):
-    val = test_db
+def test_load_data(test_db_session):
+    val = test_db_session
     print(val)
    

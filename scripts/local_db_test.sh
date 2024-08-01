@@ -12,3 +12,5 @@ source test_db_params.sh
 
 export PGPASSWORD=$DB_PASSWORD
 psql --host="${DB_SERVER_NAME}"  --port="${DB_PORT}" --dbname="${DB_NAME}"  --username="${DB_ADMIN_NAME}" - -f work_services_test.sql
+
+psql --host="${DB_SERVER_NAME}"  --port="${DB_PORT}" --dbname="${DB_NAME}"  --username="${DB_ADMIN_NAME}" -c "\copy work_order FROM 'data/work_order_test.csv' WITH (FORMAT CSV,DELIMITER ',' ,HEADER MATCH)"

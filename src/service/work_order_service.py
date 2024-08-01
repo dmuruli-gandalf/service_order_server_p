@@ -4,6 +4,9 @@ class work_order_service():
     def get_work_orders(project_id: int)->list[WorkOrder]:
         pass
     
+    def get_all_work_orders()->list[WorkOrder]:
+        pass
+    
     def get_work_order(work_id: int)->WorkOrder:
         pass
     

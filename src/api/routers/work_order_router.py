@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 from fastapi import APIRouter, Depends, HTTPException
 
-from ..schema.work_order_schema import WorkOrder 
+from ..schema.work_order_schema import WorkOrderSchema 
 import datetime
 
 router = APIRouter()
@@ -13,7 +13,7 @@ work_order_1 ={
     'start_date' : str(datetime.date(2023, 12, 25))
 }
 
-work_order_schema1 = WorkOrder(**work_order_1)
+work_order_schema1 = WorkOrderSchema(**work_order_1)
 work_orders = [work_order_schema1]
 work_order ={'single work order'}
 

@@ -30,3 +30,17 @@ engine = create_engine(url)
 Session = sessionmaker(bind=engine)
 session = Session()
 
+
+session_local = sessionmaker(
+    autocommit=False,
+    autoflush=False,
+    bind=engine,
+)
+
+
+def get_db():
+    db = session_local()
+    try:
+        yield db
+    finally:
+        db.close()

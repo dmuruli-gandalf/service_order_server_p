@@ -24,4 +24,3 @@ psql "sslmode=$SSL_MODE sslrootcert=$SSL_ROOT_CERT host=$DB_HOST user=$DB_USER p
 
 #createdb -h $DB_HOST -p $DB_PORT -U $DB_USER testdb
 
-# Check if the database was created successfully

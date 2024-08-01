@@ -9,3 +9,4 @@ WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'work_services_test')\
 \c work_services_test
 
 \i work_services.sql
+\i work_services_test_data.sql
