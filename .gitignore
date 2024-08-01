@@ -4527,3 +4527,4 @@ src/api/routers/__pycache__/work_order_router.cpython-39.pyc
 src/api/routers/__pycache__/work_order_router.cpython-312.pyc
 scripts/dev_db_params.sh
 scripts/test_db_params.sh
+tests/__pycache__/conftest.cpython-312.pyc
