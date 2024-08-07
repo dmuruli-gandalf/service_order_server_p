@@ -2,6 +2,7 @@ import datetime
 from typing import List, Optional
 from sqlalchemy.orm import Session
 from sqlalchemy import update
+from sqlalchemy import select
 from sqlalchemy.exc import DatabaseError
 
 
@@ -46,8 +47,9 @@ class WorkOrderRepository:#
         return dbWorkOrder
 
     
-    def deleteWorkOrder(self, workOrderId)->None:
-        deletionWorkOrder = self.session.query(WorkOrder).filter(WorkOrder.work_order_id==workOrderId)
+    def deleteWorkOrder(self, workOrderId)->None:       
+        stmt = select(WorkOrder).where(WorkOrder.work_order_id == workOrderId)
+        deletionWorkOrder = self.session.scalars(stmt).first()
         if deletionWorkOrder is None:
             raise DatabaseError("Work Order with work order id: ", workOrderId, "does not exist, so cannot delete")
         

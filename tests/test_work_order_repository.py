@@ -56,4 +56,4 @@ def test_delete_work_order(wo_repository):
     test_delete_id  = -4
     delete_work_order = wo_repository.getWorkOrderById(test_delete_id)
     assert delete_work_order is not None
-    wo_repository.deleteWorkOrder(delete_work_order)
+    wo_repository.deleteWorkOrder(delete_work_order.work_order_id)
